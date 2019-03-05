@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react'
 
-export const NoReduxContext = React.createContext([{ count: 0 }, () => {}])
+const INITIAL_STATE = { count: 0 }
+
+export const NoReduxContext = React.createContext([INITIAL_STATE, () => {}])
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -22,7 +24,7 @@ export function dec() {
 }
 
 export function NoReduxProvider({ children }) {
-	const [state, dispatch] = useReducer(reducer, { count: 0 })
+	const [state, dispatch] = useReducer(reducer, INITIAL_STATE)
 
 	return <NoReduxContext.Provider value={[state, dispatch]}>{children}</NoReduxContext.Provider>
 }

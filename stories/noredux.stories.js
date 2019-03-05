@@ -15,10 +15,16 @@ function Counter() {
 	)
 }
 
+function CounterDisplay() {
+	const [state] = useContext(NoReduxContext)
+
+	return <h1>{state.count}</h1>
+}
+
 function Container() {
 	return (
 		<div>
-			<p>Counting stuff:</p>
+			<CounterDisplay />
 			<Counter />
 			<Counter />
 			<Counter />
