@@ -9,8 +9,8 @@ function Counter() {
 	return (
 		<div>
 			<p>Count: {state.count}</p>
-			<button onClick={() => dispatch(inc())}>+</button>
 			<button onClick={() => dispatch(dec())}>-</button>
+			<button onClick={() => dispatch(inc())}>+</button>
 		</div>
 	)
 }
