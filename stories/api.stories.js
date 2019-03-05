@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { Button, Welcome } from '@storybook/react/demo'
 
-import useApi from '../hooks/useApi'
+import useApi from '../src/hooks/useApi'
 
 function Image({ id, width }) {
 	const [data, isLoading, error] = useApi(`https://jsonplaceholder.typicode.com/photos/${id}`)
@@ -40,4 +38,4 @@ function Container() {
 	)
 }
 
-storiesOf('useApi', module).add('Example', () => <Container />)
+storiesOf('API', module).add('Example', () => <Container />)
