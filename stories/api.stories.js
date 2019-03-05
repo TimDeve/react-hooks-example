@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import useApi from '../src/hooks/useApi'
 
-function Image({ id, width }) {
+export function Image({ id, width }) {
 	const [data, isLoading, error] = useApi(`https://jsonplaceholder.typicode.com/photos/${id}`)
 
 	if (error) return <p>There was an error. Sorry.</p>
@@ -13,7 +13,7 @@ function Image({ id, width }) {
 	return data ? <img style={{ width }} src={data.url} /> : null
 }
 
-function Container() {
+export function Container() {
 	const [id, setId] = useState(1)
 	const [width, setWidth] = useState('400')
 

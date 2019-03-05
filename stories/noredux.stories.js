@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { NoReduxContext, inc, dec, NoReduxProvider } from '../src/noRedux'
+// import { Container as Ctn } from '../test/exampleOfMockingWithHooks.test'
 
 function Counter() {
 	const [state, dispatch] = useContext(NoReduxContext)

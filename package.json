@@ -5,18 +5,40 @@
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "NODE_ENV=testing jest"
+  },
+  "babel": {
+    "env": {
+      "testing": {
+        "presets": [
+          "@babel/react"
+        ],
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "setupFiles": ["./enzyme.config.js"]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.3.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-links": "^4.1.13",
     "@storybook/addons": "^4.1.13",
     "@storybook/react": "^4.1.13",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "jest": "^24.1.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2"
   }
