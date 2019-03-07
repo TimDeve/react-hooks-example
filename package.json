@@ -21,7 +21,9 @@
     }
   },
   "jest": {
-    "setupFiles": ["./enzyme.config.js"]
+    "setupFiles": [
+      "./enzyme.config.js"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -29,17 +31,17 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^4.1.13",
-    "@storybook/addon-links": "^4.1.13",
-    "@storybook/addons": "^4.1.13",
-    "@storybook/react": "^4.1.13",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "jest": "^24.1.0",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }
