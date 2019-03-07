@@ -1,4 +1,4 @@
-// jest.mock('../src/ThrowingComponent')
+jest.mock('../src/ThrowingComponent')
 
 import React, { useState } from 'react'
 import { mount } from 'enzyme'
@@ -16,11 +16,11 @@ export function Container() {
 }
 
 describe('ThrowingComponent', () => {
-	// beforeAll(() => {
-	// 	ThrowingComponent.mockImplementation(() => <></>)
-	// })
+	beforeAll(() => {
+		ThrowingComponent.mockImplementation(() => <></>)
+	})
 
-	xit('has a ThrowingComponent', () => {
+	it('has a ThrowingComponent', () => {
 		const wrapper = mount(<Container />)
 
 		const throwing = wrapper.find(ThrowingComponent)
@@ -29,7 +29,7 @@ describe('ThrowingComponent', () => {
 		expect(throwing.prop('aProp')).toBe(100)
 	})
 
-	xit('prop change with state', () => {
+	it('prop change with state', () => {
 		const wrapper = mount(<Container />)
 
 		let throwing = wrapper.find(ThrowingComponent)
